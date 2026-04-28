@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>1st Group Academy | Premier EdTech</title>
+    <meta name="description"
+        content="Expert-led language programs and professional development courses. IELTS, SAT, Business English, Grammar, and Social Media Marketing — designed for real results.">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="images/IMG_3741.JPG.jpeg" alt="1st Group Academy" class="logo-img"
+                    onerror="this.style.display='none'">
+                <div class="logo-text">1<span>st</span> Group</div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-translate="nav_about">About</a></li>
+                <li><a href="#courses" data-translate="nav_courses">Courses</a></li>
+                <li><a href="#instructors" data-translate="nav_instructors">Instructors</a></li>
+                <li><a href="#testimonials" data-translate="nav_testimonials">Reviews</a></li>
+                <li><a href="#faq" data-translate="nav_faq">FAQ</a></li>
+                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+                <li><a href="#contact" class="btn-enroll" data-translate="nav_enroll">Enroll Now</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="az">AZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb--1"></div>
+            <div class="hero-orb hero-orb--2"></div>
+            <div class="hero-grid-overlay"></div>
+        </div>
+        <div class="hero-content container">
+            <div class="hero-text fade-up">
+                <div class="hero-pill">
+                    <span class="pill-dot"></span>
+                    <span data-translate="hero_pill">Baku's Premier EdTech Academy</span>
+                </div>
+                <h1 data-translate="hero_title">Master Languages &<br><em>Digital Skills</em><br>That Get Results</h1>
+                <p data-translate="hero_subtitle">Expert-led language programs and professional development courses.
+                    IELTS, SAT, Business English, Grammar, and Social Media Marketing — all designed to achieve real
+                    results.</p>
+                <div class="hero-actions">
+                    <a href="#courses" class="btn-primary" data-translate="hero_browse_courses">
+                        <span>Browse Courses</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="btn-ghost" data-translate="hero_learn_more">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Learn More</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-num">500+</div>
+                        <div class="stat-label" data-translate="hero_students">Students Enrolled</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-num">95%</div>
+                        <div class="stat-label" data-translate="hero_satisfaction">Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-num">20+</div>
+                        <div class="stat-label" data-translate="hero_experts">Expert Instructors</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-up fade-up--delay">
+                <div class="hero-card-main">
+                    <div class="hero-card-glow"></div>
+                    <div class="hero-logo-wrap">
+                        <img src="images/IMG_3741.JPG.jpeg" alt="1st Group Academy" class="hero-logo"
+                            onerror="this.parentElement.innerHTML='<div class=\'logo-fallback\'>1G</div>'">
+                    </div>
+                    <div class="hero-card-label">1st Group Academy</div>
+                    <div class="hero-card-sub">Premier Education Center · Baku</div>
+
+                    <div class="hero-floating-badges">
+                        <div class="fbadge fbadge--1">
+                            <i class="fas fa-star"></i>
+                            <span>4.9 Rating</span>
+                        </div>
+                        <div class="fbadge fbadge--2">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Certified</span>
+                        </div>
+                        <div class="fbadge fbadge--3">
+                            <i class="fas fa-trophy"></i>
+                            <span>#1 Academy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <div class="scroll-line"></div>
+            <span data-translate="hero_scroll">Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-features-col fade-up">
+                    <div class="about-feature-card">
+                        <div class="afc-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="afc-body">
+                            <strong data-translate="about_feature_1_title">Goal-Oriented Learning</strong>
+                            <span data-translate="about_feature_1_desc">Structured paths to your dream career</span>
+                        </div>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="afc-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="afc-body">
+                            <strong data-translate="about_feature_2_title">Certified Programs</strong>
+                            <span data-translate="about_feature_2_desc">Industry-recognized certifications</span>
+                        </div>
+                    </div>
+                    <div class="about-feature-card">
+                        <div class="afc-icon"><i class="fas fa-users"></i></div>
+                        <div class="afc-body">
+                            <strong data-translate="about_feature_3_title">Community Support</strong>
+                            <span data-translate="about_feature_3_desc">Learn alongside thousands of peers</span>
+                        </div>
+                    </div>
+                    <div class="about-accent-block">
+                        <div class="accent-num">6+</div>
+                        <div class="accent-label" data-translate="about_accent">Years of Excellence</div>
+                    </div>
+                </div>
+
+                <div class="about-text fade-up fade-up--delay">
+                    <div class="section-label" data-translate="about_label">About Us</div>
+                    <h2 data-translate="about_title">Why Choose<br>1st Group Academy?</h2>
+                    <p data-translate="about_p1">1ST Group Academy is a modern educational center dedicated to
+                        developing individuals through practical and results-oriented training programs. We specialize
+                        in language and professional development.</p>
+                    <ul class="tick-list">
+                        <li>
+                            <div class="tick-icon"><i class="fas fa-check"></i></div>
+                            <span data-translate="about_feature_1">IELTS, SAT, and international exam preparation</span>
+                        </li>
+                        <li>
+                            <div class="tick-icon"><i class="fas fa-check"></i></div>
+                            <span data-translate="about_feature_2">General, Business, and Grammar English
+                                programs</span>
+                        </li>
+                        <li>
+                            <div class="tick-icon"><i class="fas fa-check"></i></div>
+                            <span data-translate="about_feature_3">Social Media Marketing (SMM) practical
+                                training</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-primary" data-translate="about_get_started">
+                        <span>Get Started Today</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COUNTERS ==================== -->
+    <div class="counters">
+        <div class="counters-inner container">
+            <div class="counter-item">
+                <span class="counter-num" data-target="5000">0</span><span class="counter-suffix">+</span>
+                <div class="counter-label" data-translate="counters_active_students">Active Students</div>
+            </div>
+            <div class="counter-divider"></div>
+            <div class="counter-item">
+                <span class="counter-num" data-target="12">0</span><span class="counter-suffix">+</span>
+                <div class="counter-label" data-translate="counters_expert_courses">Expert Courses</div>
+            </div>
+            <div class="counter-divider"></div>
+            <div class="counter-item">
+                <span class="counter-num" data-target="5">0</span><span class="counter-suffix"></span>
+                <div class="counter-label" data-translate="counters_instructors">Instructors</div>
+            </div>
+            <div class="counter-divider"></div>
+            <div class="counter-item">
+                <span class="counter-num" data-target="95">0</span><span class="counter-suffix">%</span>
+                <div class="counter-label" data-translate="counters_satisfaction">Satisfaction Rate</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== COURSES SECTION ==================== -->
+    <section class="section-light" id="courses">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label" data-translate="courses_label">Our Programs</div>
+                <h2 class="section-title" data-translate="courses_title">Explore Our Courses</h2>
+                <p class="section-sub" data-translate="courses_sub">Programs built around outcomes — not just content.
+                </p>
+            </div>
+            <div class="courses-grid fade-up">
+
+                <div class="course-card" onclick="location.href='courses/ielts.html'">
+                    <div class="course-thumb" style="--card-hue: 214deg;">
+                        <div class="course-thumb-icon"><i class="fas fa-file-alt"></i></div>
+                        <span class="course-badge badge--gold"
+                            data-translate="course_badge_bestseller">Bestseller</span>
+                    </div>
+                    <div class="course-body">
+                        <span class="tag">IELTS</span>
+                        <h3 class="course-title" data-translate="course_ielts_title">IELTS Preparation</h3>
+                        <p class="course-desc" data-translate="course_ielts_desc">Strategy-based preparation with real
+                            exam simulations and expert feedback.</p>
+                        <div class="course-footer">
+                            <div class="course-meta-row">
+                                <span class="meta-item"><i class="far fa-clock"></i> <span
+                                        data-translate="course_ielts_duration">12 Weeks</span></span>
+                                <span class="meta-item"><i class="fas fa-users"></i> <span
+                                        data-translate="course_group">Small Groups</span></span>
+                            </div>
+                            <div class="course-cta">
+                                <span class="course-price" data-translate="course_inquire">Inquire →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='courses/sat.html'">
+                    <div class="course-thumb" style="--card-hue: 250deg;">
+                        <div class="course-thumb-icon"><i class="fas fa-book-open"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <span class="tag">SAT</span>
+                        <h3 class="course-title" data-translate="course_sat_title">SAT Verbal</h3>
+                        <p class="course-desc" data-translate="course_sat_desc">Systematic program focused on academic
+                            reading comprehension and critical thinking.</p>
+                        <div class="course-footer">
+                            <div class="course-meta-row">
+                                <span class="meta-item"><i class="far fa-clock"></i> <span
+                                        data-translate="course_sat_duration">10 Weeks</span></span>
+                                <span class="meta-item"><i class="fas fa-users"></i> <span
+                                        data-translate="course_group">Small Groups</span></span>
+                            </div>
+                            <div class="course-cta">
+                                <span class="course-price" data-translate="course_inquire">Inquire →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='courses/general-english.html'">
+                    <div class="course-thumb" style="--card-hue: 170deg;">
+                        <div class="course-thumb-icon"><i class="fas fa-comments"></i></div>
+                        <span class="course-badge badge--blue" data-translate="course_badge_popular">Popular</span>
+                    </div>
+                    <div class="course-body">
+                        <span class="tag">English</span>
+                        <h3 class="course-title" data-translate="course_ge_title">General English</h3>
+                        <p class="course-desc" data-translate="course_ge_desc">Focus on fluent and natural speaking with
+                            real-world conversational practice.</p>
+                        <div class="course-footer">
+                            <div class="course-meta-row">
+                                <span class="meta-item"><i class="far fa-clock"></i> <span
+                                        data-translate="course_ge_duration">8 Weeks</span></span>
+                                <span class="meta-item"><i class="fas fa-users"></i> <span
+                                        data-translate="course_group">Small Groups</span></span>
+                            </div>
+                            <div class="course-cta">
+                                <span class="course-price" data-translate="course_inquire">Inquire →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='courses/business-english.html'">
+                    <div class="course-thumb" style="--card-hue: 195deg;">
+                        <div class="course-thumb-icon"><i class="fas fa-briefcase"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <span class="tag">Business</span>
+                        <h3 class="course-title" data-translate="course_be_title">Business English</h3>
+                        <p class="course-desc" data-translate="course_be_desc">Master professional communication for
+                            meetings, emails, and presentations.</p>
+                        <div class="course-footer">
+                            <div class="course-meta-row">
+                                <span class="meta-item"><i class="far fa-clock"></i> <span
+                                        data-translate="course_be_duration">6 Weeks</span></span>
+                                <span class="meta-item"><i class="fas fa-users"></i> <span
+                                        data-translate="course_group">Small Groups</span></span>
+                            </div>
+                            <div class="course-cta">
+                                <span class="course-price" data-translate="course_inquire">Inquire →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='courses/grammar.html'">
+                    <div class="course-thumb" style="--card-hue: 230deg;">
+                        <div class="course-thumb-icon"><i class="fas fa-spell-check"></i></div>
+                    </div>
+                    <div class="course-body">
+                        <span class="tag">Grammar</span>
+                        <h3 class="course-title" data-translate="course_grammar_title">Grammar Mastery</h3>
+                        <p class="course-desc" data-translate="course_grammar_desc">Learn grammar systematically —
+                            building confidence from fundamentals to advanced.</p>
+                        <div class="course-footer">
+                            <div class="course-meta-row">
+                                <span class="meta-item"><i class="far fa-clock"></i> <span
+                                        data-translate="course_grammar_duration">8 Weeks</span></span>
+                                <span class="meta-item"><i class="fas fa-users"></i> <span
+                                        data-translate="course_group">Small Groups</span></span>
+                            </div>
+                            <div class="course-cta">
+                                <span class="course-price" data-translate="course_inquire">Inquire →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='courses/smm.html'">
+                    <div class="course-thumb" style="--card-hue: 335deg;">
+                        <div class="course-thumb-icon"><i class="fas fa-chart-line"></i></div>
+                        <span class="course-badge badge--new" data-translate="course_badge_new">New</span>
+                    </div>
+                    <div class="course-body">
+                        <span class="tag">Marketing</span>
+                        <h3 class="course-title" data-translate="course_smm_title">SMM Marketing</h3>
+                        <p class="course-desc" data-translate="course_smm_desc">Digital brand building, content
+                            strategy, and social media growth tactics.</p>
+                        <div class="course-footer">
+                            <div class="course-meta-row">
+                                <span class="meta-item"><i class="far fa-clock"></i> <span
+                                        data-translate="course_smm_duration">6 Weeks</span></span>
+                                <span class="meta-item"><i class="fas fa-users"></i> <span
+                                        data-translate="course_group">Small Groups</span></span>
+                            </div>
+                            <div class="course-cta">
+                                <span class="course-price" data-translate="course_inquire">Inquire →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INSTRUCTORS ==================== -->
+    <section id="instructors">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label" data-translate="instructors_label">Our Team</div>
+                <h2 class="section-title" data-translate="instructors_title">Meet Your Instructors</h2>
+                <p class="section-sub" data-translate="instructors_sub">World-class educators dedicated to your growth.
+                </p>
+            </div>
+            <div class="instructors-carousel-wrapper fade-up">
+                <button class="carousel-nav prev" id="prevInstructorBtn" aria-label="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="instructors-carousel" id="instructorsCarousel">
+                    <div class="instructors-grid-horizontal">
+
+                        <div class="instructor-card">
+                            <div class="instructor-avatar">
+                                <img src="images/Gemini_Generated_Image_5rebi55rebi55reb.png" alt="Toğrul Anar"
+                                    onerror="this.parentElement.innerHTML='<div class=\'avatar-fallback\'>TA</div>'">
+                                <div class="avatar-ring"></div>
+                            </div>
+                            <h3>Toğrul Anar</h3>
+                            <div class="instructor-role" data-translate="instructor_role_ceo">CEO & English Instructor
+                            </div>
+                            <div class="instructor-tags">
+                                <span>IELTS</span><span>Leadership</span>
+                            </div>
+                        </div>
+
+                        <div class="instructor-card">
+                            <div class="instructor-avatar">
+                                <img src="images/IMG_5902.JPG.jpeg" alt="Nəzrin Kərimova"
+                                    onerror="this.parentElement.innerHTML='<div class=\'avatar-fallback\'>NK</div>'">
+                                <div class="avatar-ring"></div>
+                            </div>
+                            <h3>Nəzrin Kərimova</h3>
+                            <div class="instructor-role" data-translate="instructor_role_english">English Language
+                                Instructor</div>
+                            <div class="instructor-tags">
+                                <span>Grammar</span><span>Speaking</span>
+                            </div>
+                        </div>
+
+                        <div class="instructor-card">
+                            <div class="instructor-avatar">
+                                <img src="images/IMG_1235.jpg.jpeg" alt="Gülsavad Şirinova"
+                                    onerror="this.parentElement.innerHTML='<div class=\'avatar-fallback\'>GŞ</div>'">
+                                <div class="avatar-ring"></div>
+                            </div>
+                            <h3>Gülsavad Şirinova</h3>
+                            <div class="instructor-role" data-translate="instructor_role_english">English Instructor
+                            </div>
+                            <div class="instructor-tags">
+                                <span>Business</span><span>Writing</span>
+                            </div>
+                        </div>
+
+                        <div class="instructor-card">
+                            <div class="instructor-avatar">
+                                <img src="images/IMG_4912.JPG.jpeg" alt="Gülarə Məmmədova"
+                                    onerror="this.parentElement.innerHTML='<div class=\'avatar-fallback\'>GM</div>'">
+                                <div class="avatar-ring"></div>
+                            </div>
+                            <h3>Gülarə Məmmədova</h3>
+                            <div class="instructor-role" data-translate="instructor_role_english">English Instructor
+                            </div>
+                            <div class="instructor-tags">
+                                <span>Reading</span><span>SAT</span>
+                            </div>
+                        </div>
+
+                        <div class="instructor-card">
+                            <div class="instructor-avatar">
+                                <img src="images/Screenshot_20260306_222900_com_android_chrome_ChromeTabbedActivity.jpg.jpeg"
+                                    alt="Fərid Abdulhüseynli"
+                                    onerror="this.parentElement.innerHTML='<div class=\'avatar-fallback\'>FA</div>'">
+                                <div class="avatar-ring"></div>
+                            </div>
+                            <h3>Fərid Abdulhüseynli</h3>
+                            <div class="instructor-role" data-translate="instructor_role_english">English Instructor
+                            </div>
+                            <div class="instructor-tags">
+                                <span>Listening</span><span>IELTS</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-nav next" id="nextInstructorBtn" aria-label="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section-light" id="testimonials">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label" data-translate="testimonials_label">Student Reviews</div>
+                <h2 class="section-title" data-translate="testimonials_title">What Our Students Say</h2>
+                <p class="section-sub" data-translate="testimonials_sub">Real results from real learners.</p>
+            </div>
+            <div class="testimonials-grid fade-up">
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p data-translate="testimonial_1">"IELTS preparation was exceptional. Improved from Band 6 to 7.5 in
+                        just 12 weeks!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div>
+                            <strong>Aysel M.</strong>
+                            <span data-translate="testimonial_1_role">IELTS Student</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card testimonial-card--featured">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p data-translate="testimonial_2">"Business English helped me get promoted. My communication skills
+                        improved dramatically within weeks."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EH</div>
+                        <div>
+                            <strong>Elnur H.</strong>
+                            <span data-translate="testimonial_2_role">Business English Student</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p data-translate="testimonial_3">"The SMM course gave me real practical skills that I applied
+                        immediately. I started my own agency!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LG</div>
+                        <div>
+                            <strong>Leyla G.</strong>
+                            <span data-translate="testimonial_3_role">SMM Student</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label" data-translate="faq_label">FAQ</div>
+                <h2 class="section-title" data-translate="faq_title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list fade-up">
+
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span data-translate="faq_q1">Do I need prior experience to enroll?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-a">
+                        <p data-translate="faq_a1">No prior experience is required for most of our beginner courses. We
+                            have programs for all levels — from complete beginners to advanced learners.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span data-translate="faq_q2">Will I receive a certificate upon completion?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-a">
+                        <p data-translate="faq_a2">Yes! Upon successful course completion, you'll receive a digital
+                            certificate from 1st Group Academy, recognized by employers and institutions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q">
+                        <span data-translate="faq_q3">Are classes live or pre-recorded?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-a">
+                        <p data-translate="faq_a3">We offer a blended model: pre-recorded video lessons combined with
+                            weekly live Q&A sessions and interactive workshops for maximum flexibility.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section-light" id="contact">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label" data-translate="contact_label">Get In Touch</div>
+                <h2 class="section-title" data-translate="contact_title">Start Your Learning Journey</h2>
+                <p class="section-sub" data-translate="contact_sub">Our team will reach out within 24 hours.</p>
+            </div>
+            <div class="contact-grid fade-up">
+                <div class="contact-info">
+                    <div class="contact-info-inner">
+                        <h3 data-translate="contact_info_title">Let's Talk</h3>
+                        <p data-translate="contact_info_desc">Fill the form and our team will reach out to find the
+                            right program for you.</p>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="info-content">
+                                    <strong data-translate="contact_visit">Visit Us</strong>
+                                    <span>26 Nadir Əliyev, Baku, SİGMA Plaza</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="info-content">
+                                    <strong data-translate="contact_email">Email Us</strong>
+                                    <a href="mailto:1stgroupacademy@gmail.com">1stgroupacademy@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-phone"></i></div>
+                                <div class="info-content">
+                                    <strong data-translate="contact_call">Call Us</strong>
+                                    <span>+994 (55) 580-06-12</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="https://www.instagram.com/1st_group_academy?igsh=MWhiNzJqa3lscnRteA==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/togrul-anar-a185a3282/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group floating">
+                            <input type="text" id="fname" placeholder=" " autocomplete="given-name">
+                            <label for="fname"><span data-translate="form_fname">First Name</span>
+                                <span>*</span></label>
+                        </div>
+                        <div class="form-group floating">
+                            <input type="text" id="lname" placeholder=" " autocomplete="family-name">
+                            <label for="lname" data-translate="form_lname">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="form-group floating">
+                        <input type="email" id="email" placeholder=" " autocomplete="email">
+                        <label for="email"><span data-translate="form_email">Email Address</span> <span>*</span></label>
+                    </div>
+                    <div class="form-group floating">
+                        <input type="tel" id="phone" placeholder=" " autocomplete="tel">
+                        <label for="phone" data-translate="form_phone">Phone Number</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="courseSelect">
+                            <option value="" disabled selected data-translate="form_select_course">Select a Course
+                            </option>
+                            <option data-translate="course_ielts_option">IELTS Preparation</option>
+                            <option data-translate="course_sat_option">SAT</option>
+                            <option data-translate="course_ge_option">General English</option>
+                            <option data-translate="course_be_option">Business English</option>
+                            <option data-translate="course_grammar_option">Grammar Mastery</option>
+                            <option data-translate="course_smm_option">SMM Marketing</option>
+                        </select>
+                    </div>
+                    <div class="form-group floating">
+                        <textarea id="message" rows="3" placeholder=" "></textarea>
+                        <label for="message" data-translate="form_message">Your Message</label>
+                    </div>
+                    <button class="form-submit" onclick="submitForm()">
+                        <span data-translate="form_submit">Send Enrollment Request</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="success-msg" id="successMsg">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="form_success">Thank you! We'll be in touch within 24 hours.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">1<span>st</span> Group Academy</div>
+                    <p data-translate="footer_desc">Empowering learners through world-class language and professional
+                        development programs since 2018.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/1st_group_academy?igsh=MWhiNzJqa3lscnRteA=="
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/togrul-anar-a185a3282/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="footer_programs">Programs</h4>
+                    <ul>
+                        <li><a href="courses/ielts.html" data-translate="footer_ielts">IELTS Preparation</a></li>
+                        <li><a href="courses/sat.html" data-translate="footer_sat">SAT Verbal</a></li>
+                        <li><a href="courses/business-english.html" data-translate="footer_be">Business English</a></li>
+                        <li><a href="courses/general-english.html" data-translate="footer_ge">General English</a></li>
+                        <li><a href="courses/smm.html" data-translate="footer_smm">SMM Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="footer_academy">Academy</h4>
+                    <ul>
+                        <li><a href="#about" data-translate="nav_about">About Us</a></li>
+                        <li><a href="#instructors" data-translate="nav_instructors">Instructors</a></li>
+                        <li><a href="#testimonials" data-translate="nav_testimonials">Reviews</a></li>
+                        <li><a href="#faq" data-translate="nav_faq">FAQ</a></li>
+                        <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="footer_contact_title">Contact</h4>
+                    <ul>
+                        <li>26 Nadir Əliyev, Baku</li>
+                        <li>SİGMA Plaza</li>
+                        <li><a href="mailto:1stgroupacademy@gmail.com">1stgroupacademy@gmail.com</a></li>
+                        <li>+994 (55) 580-06-12</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 1st Group Academy. All rights reserved.</span>
+                <span class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translations.js"></script>
+</body>
+
+</html>

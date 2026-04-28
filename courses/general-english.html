@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General English - 1st Group Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .course-hero {
+            min-height: 65vh;
+            background: linear-gradient(135deg, #002147 0%, #0a2c55 100%);
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-hero::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(43, 145, 209, 0.12) 0%, transparent 70%);
+            bottom: -150px;
+            right: -150px;
+            pointer-events: none;
+        }
+
+        .course-hero-content {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .course-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(43, 145, 209, 0.15);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .course-icon i {
+            font-size: 2.2rem;
+            color: #2B91D1;
+        }
+
+        .course-hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 500;
+            font-family: 'DM Serif Display', serif;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 60px;
+            margin-left: 12px;
+            vertical-align: middle;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .course-hero p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: #2B91D1;
+            transform: translateX(-4px);
+        }
+
+        .pill-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 6px 16px;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .course-card-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 28px;
+            padding: 36px;
+        }
+
+        .price-tag {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .includes-list {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .includes-list li {
+            padding: 8px 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .includes-list li i {
+            color: #2B91D1;
+            font-size: 0.75rem;
+        }
+
+        .enroll-btn {
+            width: 100%;
+            background: #2B91D1;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .enroll-btn:hover {
+            background: #1a6fa3;
+            transform: translateY(-2px);
+        }
+
+        .module-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .module-item {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .module-item:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(43, 145, 209, 0.2);
+        }
+
+        .module-item h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #002147;
+            margin-bottom: 10px;
+        }
+
+        .module-item p {
+            color: #5a7186;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .module-num {
+            display: inline-block;
+            background: #e8f4fd;
+            color: #2B91D1;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 60px;
+            margin-bottom: 12px;
+        }
+
+        .badge-green {
+            background: #10b981 !important;
+        }
+
+        @media (max-width: 992px) {
+            .course-hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .course-hero {
+                padding: 100px 0 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .course-hero-content {
+                padding: 0 24px;
+            }
+
+            .module-item {
+                padding: 20px;
+            }
+
+            .level-badge {
+                display: inline-block;
+                margin-top: 8px;
+                margin-left: 0;
+            }
+
+            .course-hero h1 {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/IMG_3741.JPG.jpeg" alt="1st Group Academy" class="logo-img"
+                    onerror="this.style.display='none'">
+                <div class="logo-text">1<span>st</span> Group</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#courses" data-translate="nav_courses">Courses</a></li>
+                <li><a href="../index.html#contact" class="btn-enroll" data-translate="nav_enroll">Enroll Now</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="az">AZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-content">
+            <div>
+                <a href="../index.html#courses" class="back-link" data-translate="course_back_link">← Back to
+                    Courses</a>
+                <div class="course-icon"><i class="fas fa-comments"></i></div>
+                <h1><span data-translate="course_ge_title">General English</span> <span class="level-badge badge-green"
+                        data-translate="course_ge_badge">A1 to C1</span></h1>
+                <p data-translate="course_ge_subtitle">Focus on fluent and natural speaking. Grammar taught practically
+                    with lessons based on real-life situations. Goal: develop a speaking student who can communicate
+                    confidently in any everyday situation.</p>
+                <div class="pill-group">
+                    <span class="pill" data-translate="course_ge_duration">8 Weeks</span>
+                    <span class="pill" data-translate="course_ge_modules">6 Modules</span>
+                    <span class="pill" data-translate="course_ge_level">A1 to C1</span>
+                    <span class="pill" data-translate="course_ge_focus">Speaking Focus</span>
+                </div>
+            </div>
+            <div class="course-card-box">
+                <div class="price-tag" data-translate="course_ge_price">Contact for Pricing</div>
+                <ul class="includes-list">
+                    <li><i class="fas fa-check-circle"></i> <span data-translate="course_ge_feature_1">Complete 4-skill
+                            English training</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-translate="course_ge_feature_2">Interactive
+                            speaking sessions</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-translate="course_ge_feature_3">Grammar &
+                            vocabulary development</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-translate="course_ge_feature_4">Weekly practice
+                            assignments</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-translate="course_ge_feature_5">Progress tracking
+                            & feedback</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-translate="course_ge_feature_6">Certificate of
+                            completion</span></li>
+                </ul>
+                <button class="enroll-btn" onclick="window.location.href='../index.html#contact'"
+                    data-translate="course_enroll_btn">Enroll Now →</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" style="padding: 80px 40px;">
+        <div style="text-align: center; margin-bottom: 56px;">
+            <div class="section-label" data-translate="course_curriculum_label">Course Curriculum</div>
+            <h2 style="font-family: 'DM Serif Display', serif; font-size: 2.2rem;"
+                data-translate="course_curriculum_title">What You'll Learn</h2>
+        </div>
+        <div class="module-list">
+            <div class="module-item">
+                <div class="module-num">Module 01</div>
+                <h3>English Foundations</h3>
+                <p>Basic sentence structure, present tenses, common vocabulary, pronunciation basics, and simple
+                    conversations.</p>
+            </div>
+            <div class="module-item">
+                <div class="module-num">Module 02</div>
+                <h3>Everyday Communication</h3>
+                <p>Introducing yourself, asking and answering questions, daily routines, shopping and travel English.
+                </p>
+            </div>
+            <div class="module-item">
+                <div class="module-num">Module 03</div>
+                <h3>Grammar & Structure</h3>
+                <p>Past and future tenses, modal verbs, prepositions, conditionals, and grammar practice tests.</p>
+            </div>
+            <div class="module-item">
+                <div class="module-num">Module 04</div>
+                <h3>Reading & Listening</h3>
+                <p>Short text reading, listening to conversations, understanding main ideas, note-taking techniques.</p>
+            </div>
+            <div class="module-item">
+                <div class="module-num">Module 05</div>
+                <h3>Speaking & Pronunciation</h3>
+                <p>Fluency development, accent reduction, natural intonation, discussion techniques, and presentation
+                    practice.</p>
+            </div>
+            <div class="module-item">
+                <div class="module-num">Module 06</div>
+                <h3>Real-Life Application</h3>
+                <p>Job interviews, social situations, phone conversations, email writing, and final speaking assessment.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">1<span>st</span> Group Academy</div>
+                    <p data-translate="footer_desc">Empowering learners through world-class language programs since
+                        2018.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/1st_group_academy?igsh=MWhiNzJqa3lscnRteA=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/togrul-anar-a185a3282/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="footer_programs">Programs</h4>
+                    <ul>
+                        <li><a href="ielts.html" data-translate="footer_ielts">IELTS Preparation</a></li>
+                        <li><a href="sat.html" data-translate="footer_sat">SAT Verbal</a></li>
+                        <li><a href="general-english.html" data-translate="footer_ge">General English</a></li>
+                        <li><a href="business-english.html" data-translate="footer_be">Business English</a></li>
+                        <li><a href="grammar.html" data-translate="footer_grammar">Grammar Mastery</a></li>
+                        <li><a href="smm.html" data-translate="footer_smm">SMM Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-translate="footer_contact_title">Contact</h4>
+                    <ul>
+                        <li>26 Nadir Əliyev, Baku</li>
+                        <li>SİGMA Plaza</li>
+                        <li><a href="mailto:1stgroupacademy@gmail.com">1stgroupacademy@gmail.com</a></li>
+                        <li>+994 (55) 580-06-12</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 1st Group Academy. All rights reserved.</span><span
+                    class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></span></div>
+        </div>
+    </footer>
+    <button id="backTop"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/script.js"></script>
+    <script src="../js/translations.js"></script>
+</body>
+
+</html>
