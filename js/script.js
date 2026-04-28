@@ -347,11 +347,16 @@ document.querySelectorAll('.btn-primary, .btn-ghost, .form-submit, .btn-enroll')
     setTimeout(() => ripple.remove(), 500);
   });
 });
-function openLocation() {
-  const address = "SİGMA Plaza, 26 Nadir Əliyev, Baku, Azerbaijan";
-  const url = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
-  window.open(url, "_blank");
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("locationBtn");
+
+  btn.addEventListener("click", function () {
+    const address = "SİGMA Plaza, 26 Nadir Əliyev, Baku, Azerbaijan";
+    const url = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(address);
+
+    window.open(url, "_blank");
+  });
+});
 // Course card cursor effect
 document.querySelectorAll('.course-card').forEach(card => {
   card.addEventListener('mousemove', function (e) {
